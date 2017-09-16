@@ -1,0 +1,6 @@
+---
+
+_master_config:
+  interface: 0.0.0.0
+  cli_summary: True
+

@@ -1,0 +1,12 @@
+---
+
+- name: add-repo-key
+  apt_key:
+    url: "https://repo.saltstack.com/apt/debian/{{ os_major_release.num }}/amd64/{{ salt_version }}/SALTSTACK-GPG-KEY.pub"
+    state: present
+
+- name: add-repo
+  apt_repository:
+    repo: "deb http://repo.saltstack.com/apt/debian/{{ os_major_release.num }}/amd64/{{ salt_version }} {{ os_major_release.name }} main"
+    state: present
+    filename: 'saltstack'

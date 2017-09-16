@@ -1,0 +1,6 @@
+---
+
+_minion_config:
+  id: "{{ inventory_hostname }}"
+  master: localhost
+

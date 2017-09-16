@@ -1,0 +1,7 @@
+---
+
+- name: install-salt-minion
+  apt:
+    name: salt-minion
+    state: present
+

@@ -1,0 +1,7 @@
+---
+
+- name: install-salt-master
+  yum:
+    name: salt-master
+    state: present
+

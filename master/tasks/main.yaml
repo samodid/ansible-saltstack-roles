@@ -1,0 +1,14 @@
+---
+
+- include: "{{ ansible_distribution }}.yaml"
+
+- name: populate-master-config
+  template:
+    src: master.j2
+    dest: /etc/salt/master
+    mode: 0640
+  notify:
+    - restart-salt-master
+  tags:
+    - conf
+

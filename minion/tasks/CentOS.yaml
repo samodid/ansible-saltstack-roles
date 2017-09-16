@@ -1,0 +1,7 @@
+---
+
+- name: install-salt-minion
+  yum:
+    name: salt-minion
+    state: present
+

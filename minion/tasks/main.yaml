@@ -1,0 +1,14 @@
+---
+
+- include: "{{ ansible_distribution }}.yaml"
+
+- name: populate-minion-config
+  template:
+    src: minion.j2
+    dest: /etc/salt/minion
+    mode: 0640
+  notify:
+    - restart-salt-minion
+  tags:
+    - conf
+
