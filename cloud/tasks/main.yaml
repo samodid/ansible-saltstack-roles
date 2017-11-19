@@ -1,1 +1,12 @@
 ---
+
+- include_tasks: "{{ ansible_distribution }}.yaml"
+
+- name: populate-cloud-config
+  template:
+    src: cloud.j2
+    dest: /etc/salt/cloud
+    mode: 0640
+  tags:
+    - conf
+

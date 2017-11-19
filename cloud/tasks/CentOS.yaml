@@ -1,0 +1,7 @@
+---
+
+- name: install-salt-cloud
+  yum:
+    name: salt-cloud
+    state: present
+
