@@ -1,6 +1,6 @@
 ---
 
-- include: "{{ ansible_distribution }}.yaml"
+- include_tasks: "{{ ansible_distribution }}.yaml"
 
 - name: populate-master-config
   template:
