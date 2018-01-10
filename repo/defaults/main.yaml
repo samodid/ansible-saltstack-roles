@@ -1,6 +1,6 @@
 ---
 
-salt_version: 2016.11
+salt_version: latest
 
 os_major_release:
   name: stretch
