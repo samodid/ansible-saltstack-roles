@@ -1,0 +1,12 @@
+---
+
+- name: add-repo-key
+  apt_key:
+    url: "https://repo.saltproject.io/py3/ubuntu/{{ ansible_distribution_version }}/amd64/{{ salt_version }}/salt-archive-keyring.gpg" 
+    state: present
+
+- name: add-repo
+  apt_repository:
+    repo: "deb https://repo.saltproject.io/py3/ubuntu/{{ ansible_distribution_version }}/amd64/{{ salt_version }} {{ ansible_distribution_release }} main"
+    state: present
+    filename: 'salt'

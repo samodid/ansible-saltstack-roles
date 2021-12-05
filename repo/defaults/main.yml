@@ -1,0 +1,7 @@
+---
+
+salt_version: 3004
+
+os_major_release:
+  name: bullseye
+  num: 11

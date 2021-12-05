@@ -1,0 +1,17 @@
+---
+
+- name: add-repo-key
+  rpm_key:
+    key: "https://repo.saltproject.io/py3/redhat/{{ ansible_distribution_major_version }}/x86_64/{{ salt_version }}/SALTSTACK-GPG-KEY.pub" 
+    state: present
+
+- name: add-repo
+  yum_repository:
+    name: salt
+    description: "Salt repo for RHEL/CentOS PY3"
+    baseurl: "https://repo.saltproject.io/py3/redhat/{{ ansible_distribution_major_version }}/x86_64/{{ salt_version }}"
+    gpgcheck: yes
+    enabled: yes
+    skip_if_unavailable: yes
+    failovermethod: priority
+    state: present

@@ -1,7 +1,0 @@
----
-
-salt_version: latest
-
-os_major_release:
-  name: stretch
-  num: 9

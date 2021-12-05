@@ -1,6 +1,6 @@
 ---
 
-- include_tasks: "{{ ansible_distribution }}.yaml"
+- include: "{{ ansible_distribution }}.yml"
 
 - name: populate-minion-config
   template:
